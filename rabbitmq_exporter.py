@@ -1,9 +1,3 @@
-#install the required libraries:
-pip install prometheus_client requests
-
-
-
-
 import os
 import time
 import requests
@@ -11,8 +5,8 @@ from prometheus_client import start_http_server, Gauge
 
 # Environment variables
 RABBITMQ_HOST = os.getenv('RABBITMQ_HOST', 'localhost')
-RABBITMQ_USER = os.getenv('RABBITMQ_USER', 'guest')
-RABBITMQ_PASSWORD = os.getenv('RABBITMQ_PASSWORD', 'guest')
+RABBITMQ_USER = os.getenv('RABBITMQ_USER', 'rabmq_user')
+RABBITMQ_PASSWORD = os.getenv('RABBITMQ_PASSWORD', 'rabmq_passwd')
 RABBITMQ_API_URL = f'http://{RABBITMQ_HOST}:15672/api/queues'
 
 # Prometheus metrics
